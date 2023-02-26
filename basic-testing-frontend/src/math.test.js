@@ -47,3 +47,14 @@ it('should yield 0 if an empty array is provided', () => {
   const expectedResult = 0;
   expect(result).toBe(expectedResult);
 });
+
+it('should throw if no value is provided', () => {
+  // Arrange
+  const fn = function () {
+    add();
+  };
+
+  // Assert
+  expect(fn).toThrow();
+  expect(() => add()).toThrow();
+});
