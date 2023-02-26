@@ -35,3 +35,15 @@ it('should yield NaN if at least one invalid number is provided', () => {
   // Assert
   expect(result).toBeNaN();
 });
+
+it('should yield 0 if an empty array is provided', () => {
+  // Arrange
+  const numbers = [];
+
+  // Act
+  const result = add(numbers);
+
+  // Assert
+  const expectedResult = 0;
+  expect(result).toBe(expectedResult);
+});
