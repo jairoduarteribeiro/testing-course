@@ -58,3 +58,13 @@ it('should throw if no value is provided', () => {
   expect(fn).toThrow();
   expect(() => add()).toThrow();
 });
+
+it('should throw if multiple values are provided', () => {
+  // Arrange
+  const number1 = 1;
+  const number2 = 2;
+  const number3 = 3;
+
+  // Assert
+  expect(() => add(number1, number2, number3)).toThrow();
+});
