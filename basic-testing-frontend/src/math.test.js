@@ -55,8 +55,8 @@ it('should throw if no value is provided', () => {
   };
 
   // Assert
-  expect(fn).toThrow();
-  expect(() => add()).toThrow();
+  expect(fn).toThrow(/is not iterable/);
+  expect(() => add()).toThrow(/is not iterable/);
 });
 
 it('should throw if multiple values are provided', () => {
@@ -66,5 +66,5 @@ it('should throw if multiple values are provided', () => {
   const number3 = 3;
 
   // Assert
-  expect(() => add(number1, number2, number3)).toThrow();
+  expect(() => add(number1, number2, number3)).toThrow(/is not iterable/);
 });
